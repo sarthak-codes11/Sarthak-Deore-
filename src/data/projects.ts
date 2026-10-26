@@ -169,6 +169,7 @@ export const projects: Project[] = [
     description:
       "An intelligent agentic travel planning system that autonomously formulates day-wise trip itineraries across Indian destinations. Utilizes LangChain and a cyclic LangGraph ReAct architecture with tool-calling capabilities across flights, hotels, attractions, live weather, and budgeting.",
     image: "/projects/tripmind.png",
+    aspectRatio: "square",
     year: "2024",
     role: "AI / LLM Systems Engineer",
     status: "Completed",
@@ -266,6 +267,7 @@ export const projects: Project[] = [
     description:
       "A comprehensive platform engineered for modern software engineers. Combines vector semantic resume analysis with AI-driven mock interview simulations, automated ATS scoring, and dynamic technical interview coaching.",
     image: "/projects/ascend.png",
+    aspectRatio: "square",
     year: "2024",
     role: "Full-Stack Developer",
     status: "Active",
@@ -331,6 +333,7 @@ export const projects: Project[] = [
     description:
       "An exploratory data analysis and geospatial payment intelligence project crunching 25,000+ data points from the PhonePe Pulse repository spanning 2018–2024 to map district-level UPI adoption and growth trends.",
     image: "/projects/phonepe.png",
+    aspectRatio: "square",
     year: "2024",
     role: "Data & ML Engineer",
     status: "Completed",
@@ -362,6 +365,7 @@ export const projects: Project[] = [
     description:
       "A predictive financial forecasting pipeline trained on historical TSLA equity data, combining moving-average technical indicators, RSI momentum signals, and supervised regression models.",
     image: "/projects/teslastock.png",
+    aspectRatio: "standard",
     year: "2024",
     role: "ML Engineer",
     status: "Completed",
