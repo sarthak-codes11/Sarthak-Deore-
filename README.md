@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sarthak Deore — Software Engineering & AI Systems Portfolio
 
-## Getting Started
+A high-performance personal portfolio built with **Next.js 16**, **TypeScript**, and **Tailwind CSS**, featuring kinetic typography, industrial drafting aesthetics, and interactive architectural case studies.
 
-First, run the development server:
+🌐 **Live URL**: [sarthakdeore.dev](https://github.com/sarthak-codes11/Sarthak-Deore-)  
+📄 **Resume**: [Download PDF](public/Sarthak_Deore_Resume.pdf)
+
+---
+
+## ✦ Key Architecture & Highlights
+
+- **Dynamic Center-Dial Navigation**: A mechanical camera dial inspired by tactile drafting instruments. Features dynamic padding, center-alignment snapping, and audio-synthesized tactile ticks on tab transition.
+- **Pinterest Masonry Project Grid**: Multi-column masonry layout featuring 4-slide horizontal carousels for each project:
+  - **Slide 1**: High-fidelity production screenshot capture.
+  - **Slide 2**: Interactive app UI mockup component (e.g. currency conversion, IPsec packet inspector, CCTV carving feed).
+  - **Slide 3**: Architecture dataflow blueprint & technical pipeline steps.
+  - **Slide 4**: Live telemetry & terminal log feed (`telemetry.log`).
+- **Interactive Deep-Dive Lightbox**: Full-screen modal case studies with key system metrics, architecture specifications, engineering highlights, and direct GitHub links. Accessible with keyboard controls (`←` / `→` / `Esc`).
+- **Technical Articles & Publications**: Dedicated engineering writing covering digital forensics, FastF1 machine learning modeling, and offline-first edtech architectures.
+- **Kinetic Sticker Trail**: Interactive cursor physics trail with spring dynamics and clean SVG illustrations.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 16 (Turbopack, App Router, React Server Components)
+- **Language**: TypeScript 5
+- **Styling**: Tailwind CSS + Custom CSS Design Tokens
+- **Icons**: Lucide React + Custom SVG Brand Icons
+- **Audio**: Web Audio API (tactile tick synthesizer + fallback)
+- **Deployment**: Vercel
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18.17+ or newer
+- npm / pnpm / yarn
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/sarthak-codes11/Sarthak-Deore-.git
+cd Sarthak-Deore-
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📬 Contact & Connect
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **GitHub**: [@sarthak-codes11](https://github.com/sarthak-codes11)
+- **LinkedIn**: [Sarthak Deore](https://www.linkedin.com/in/sarthak-deore-dev/)
+- **LeetCode**: [@asapcoder11](https://leetcode.com/u/asapcoder11/)
+- **Hackathon Team**: [ByteForce](https://github.com/byteforce101-ops)
+- **Email**: [sarthak.dilip.deore@gmail.com](mailto:sarthak.dilip.deore@gmail.com)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
