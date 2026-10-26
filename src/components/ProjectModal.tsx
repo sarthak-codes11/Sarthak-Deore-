@@ -100,12 +100,12 @@ export function ProjectModal({ project, onClose, onNext, onPrev }: ProjectModalP
         <div className="p-6 sm:p-8 overflow-y-auto flex flex-col gap-8 text-neutral-800">
           {/* Project Screenshot / Hero Preview */}
           {project.image && (
-            <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden bg-neutral-950 border border-neutral-200/90 shadow-sm group">
+            <div className="relative w-full rounded-xl overflow-hidden bg-neutral-950 border border-neutral-200/90 shadow-sm group flex items-center justify-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={project.image}
                 alt={`${project.title} preview`}
-                className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                className="w-full max-h-[460px] object-contain bg-neutral-950 transition-transform duration-500 group-hover:scale-[1.01]"
               />
               <div className="absolute bottom-2.5 right-2.5 px-2.5 py-1 bg-black/80 backdrop-blur-md rounded text-[10px] font-mono text-white/90 border border-white/10">
                 Production Capture / Blueprint

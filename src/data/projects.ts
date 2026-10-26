@@ -5,6 +5,7 @@ export interface Project {
   subtitle: string;
   description: string;
   image: string;
+  aspectRatio?: "square" | "landscape" | "standard";
   year: string;
   role: string;
   status: "Completed" | "Active" | "Research";
@@ -27,6 +28,7 @@ export const projects: Project[] = [
     description:
       "A production-grade digital video forensics platform developed to carve and recover surveillance footage from corrupted or proprietary DVR/NVR hard drives across leading manufacturers (Hikvision, Dahua, CP Plus). Features HIKBTREE filesystem parsing, unallocated-space carving, and an AI detector for collision and sudden-deceleration heuristics.",
     image: "/projects/dvrforensics.png",
+    aspectRatio: "standard",
     year: "2024",
     role: "Team Lead — ByteForce",
     status: "Completed",
@@ -132,6 +134,7 @@ export const projects: Project[] = [
     description:
       "A high-velocity ticketing and customer resolution system developed from Figma design specifications into production-grade React and TypeScript code, featuring triage automations and SLA countdown monitors.",
     image: "/projects/tickit.png",
+    aspectRatio: "square",
     year: "2024",
     role: "Frontend Engineer",
     status: "Completed",
@@ -199,6 +202,7 @@ export const projects: Project[] = [
     description:
       "A comprehensive security analysis suite built with Next.js 16 and Python to inspect IPsec VPN communications. Analyzes IKEv1/IKEv2 handshakes, flags deprecated cryptographic algorithms (DES, 3DES, MD5, SHA-1), and outputs structured vulnerability remediation reports.",
     image: "/projects/cipherlens.png",
+    aspectRatio: "standard",
     year: "2024",
     role: "Team Lead — ByteForce",
     status: "Active",
@@ -230,6 +234,7 @@ export const projects: Project[] = [
     description:
       "Engineered for the Drunix × Citi Hackathon ('Build the Future of Payments in India'). Built to optimize cross-border remittance corridors into India through dynamic multi-bank routing, automated FX conversion heuristics, and compliance ledgers.",
     image: "/projects/citiremittance.png",
+    aspectRatio: "square",
     year: "2024",
     role: "Team Lead — ByteForce",
     status: "Completed",
@@ -292,6 +297,7 @@ export const projects: Project[] = [
     description:
       "A telemetry and road health scoring software platform built for precision infrastructure analysis. Implements a weighted sensor fusion algorithm combining ultrasonic depth drops, vertical acceleration spikes, and vibration metrics to eliminate false alarms and output sector-level Road Health Indices (0–100).",
     image: "/projects/smartpothole.png",
+    aspectRatio: "square",
     year: "2024",
     role: "Lead Systems & Software Engineer",
     status: "Completed",

@@ -70,6 +70,13 @@ export function ProjectCarouselCard({ project, onOpenModal }: Props) {
       ? "FS"
       : "SYS";
 
+  const aspectClass =
+    project.aspectRatio === "square"
+      ? "aspect-square"
+      : project.aspectRatio === "standard"
+      ? "aspect-[4/3]"
+      : "aspect-[16/10]";
+
   return (
     <article
       onClick={onOpenModal}
@@ -134,22 +141,22 @@ export function ProjectCarouselCard({ project, onOpenModal }: Props) {
         >
           {/* SLIDE 1: Screenshot Image */}
           <div className="w-full flex-shrink-0 snap-center p-3.5">
-            <SlideScreenshot project={project} />
+            <SlideScreenshot project={project} aspectClass={aspectClass} />
           </div>
 
           {/* SLIDE 2: Interactive UI Widget */}
           <div className="w-full flex-shrink-0 snap-center p-3.5">
-            <SlideAppUi project={project} />
+            <SlideAppUi project={project} aspectClass={aspectClass} />
           </div>
 
           {/* SLIDE 3: System Architecture / Pipeline Blueprint */}
           <div className="w-full flex-shrink-0 snap-center p-3.5">
-            <SlideArchitecture project={project} />
+            <SlideArchitecture project={project} aspectClass={aspectClass} />
           </div>
 
           {/* SLIDE 4: Live Telemetry / Terminal Execution Logs */}
           <div className="w-full flex-shrink-0 snap-center p-3.5">
-            <SlideTerminal project={project} />
+            <SlideTerminal project={project} aspectClass={aspectClass} />
           </div>
         </div>
 
@@ -242,13 +249,13 @@ export function ProjectCarouselCard({ project, onOpenModal }: Props) {
 // ==========================================
 // SLIDE 1: Project Screenshot Image
 // ==========================================
-function SlideScreenshot({ project }: { project: Project }) {
+function SlideScreenshot({ project, aspectClass }: { project: Project; aspectClass: string }) {
   return (
-    <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden bg-neutral-950 border border-neutral-200/70 shadow-xs group/img">
+    <div className={`relative w-full ${aspectClass} rounded-xl overflow-hidden bg-neutral-950 border border-neutral-200/70 shadow-xs group/img flex items-center justify-center`}>
       <img
         src={project.image}
         alt={`${project.title} screenshot`}
-        className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105"
+        className="w-full h-full object-cover object-center transition-transform duration-500 group-hover/img:scale-105"
         loading="lazy"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-between p-2.5 pointer-events-none">
@@ -266,10 +273,10 @@ function SlideScreenshot({ project }: { project: Project }) {
 // ==========================================
 // SLIDE 2: Interactive App UI Component
 // ==========================================
-function SlideAppUi({ project }: { project: Project }) {
+function SlideAppUi({ project, aspectClass }: { project: Project; aspectClass: string }) {
   if (project.id === "travelplanner") {
     return (
-      <div className="w-full aspect-[16/10] rounded-xl p-3 bg-emerald-950 text-white font-sans flex flex-col justify-between shadow-inner">
+      <div className={`w-full ${aspectClass} rounded-xl p-3 bg-emerald-950 text-white font-sans flex flex-col justify-between shadow-inner`}>
         <div>
           <div className="flex items-center justify-between text-[11px] font-mono text-emerald-300 border-b border-emerald-800 pb-1">
             <span className="flex items-center gap-1">
@@ -294,7 +301,7 @@ function SlideAppUi({ project }: { project: Project }) {
 
   if (project.id === "cipher-lens") {
     return (
-      <div className="w-full aspect-[16/10] rounded-xl p-3 bg-slate-950 text-white font-sans flex flex-col justify-between shadow-inner">
+      <div className={`w-full ${aspectClass} rounded-xl p-3 bg-slate-950 text-white font-sans flex flex-col justify-between shadow-inner`}>
         <div>
           <div className="flex items-center justify-between text-[11px] font-mono text-indigo-300 border-b border-slate-800 pb-1">
             <span className="flex items-center gap-1">
@@ -320,7 +327,7 @@ function SlideAppUi({ project }: { project: Project }) {
 
   if (project.id === "dvr-forensics") {
     return (
-      <div className="w-full aspect-[16/10] rounded-xl p-3 bg-zinc-950 text-white font-sans flex flex-col justify-between shadow-inner">
+      <div className={`w-full ${aspectClass} rounded-xl p-3 bg-zinc-950 text-white font-sans flex flex-col justify-between shadow-inner`}>
         <div>
           <div className="flex items-center justify-between text-[11px] font-mono text-cyan-300 border-b border-zinc-800 pb-1">
             <span className="flex items-center gap-1">
@@ -345,7 +352,7 @@ function SlideAppUi({ project }: { project: Project }) {
 
   if (project.id === "citi-remittance") {
     return (
-      <div className="w-full aspect-[16/10] rounded-xl p-3 bg-teal-950 text-white font-sans flex flex-col justify-between shadow-inner">
+      <div className={`w-full ${aspectClass} rounded-xl p-3 bg-teal-950 text-white font-sans flex flex-col justify-between shadow-inner`}>
         <div>
           <div className="flex items-center justify-between text-[11px] font-mono text-teal-300 border-b border-teal-800 pb-1">
             <span className="flex items-center gap-1">
@@ -370,7 +377,7 @@ function SlideAppUi({ project }: { project: Project }) {
 
   // Fallback UI card
   return (
-    <div className="w-full aspect-[16/10] rounded-xl p-3 bg-neutral-900 text-white font-sans flex flex-col justify-between shadow-inner">
+    <div className={`w-full ${aspectClass} rounded-xl p-3 bg-neutral-900 text-white font-sans flex flex-col justify-between shadow-inner`}>
       <div>
         <div className="flex items-center justify-between text-[11px] font-mono text-neutral-400 border-b border-neutral-800 pb-1">
           <span>{project.title.split("—")[0]}</span>
@@ -390,7 +397,7 @@ function SlideAppUi({ project }: { project: Project }) {
 // ==========================================
 // SLIDE 3: Architecture & Flow Blueprint
 // ==========================================
-function SlideArchitecture({ project }: { project: Project }) {
+function SlideArchitecture({ project, aspectClass }: { project: Project; aspectClass: string }) {
   const steps = project.architecture || [
     "Modular system design with decoupled interfaces",
     "High-throughput transactional data pipeline",
@@ -398,7 +405,7 @@ function SlideArchitecture({ project }: { project: Project }) {
   ];
 
   return (
-    <div className="w-full aspect-[16/10] rounded-xl p-3 bg-white border border-neutral-200 text-neutral-900 font-mono text-xs flex flex-col justify-between">
+    <div className={`w-full ${aspectClass} rounded-xl p-3 bg-white border border-neutral-200 text-neutral-900 font-mono text-xs flex flex-col justify-between`}>
       <div>
         <div className="flex items-center gap-1.5 text-neutral-500 pb-1.5 border-b border-neutral-100 text-[10px] uppercase tracking-wider font-semibold">
           <Layers className="w-3.5 h-3.5 text-neutral-700" />
@@ -423,9 +430,9 @@ function SlideArchitecture({ project }: { project: Project }) {
 // ==========================================
 // SLIDE 4: Live Telemetry & Terminal Logs
 // ==========================================
-function SlideTerminal({ project }: { project: Project }) {
+function SlideTerminal({ project, aspectClass }: { project: Project; aspectClass: string }) {
   return (
-    <div className="w-full aspect-[16/10] rounded-xl p-3 bg-neutral-950 text-neutral-200 font-mono text-xs flex flex-col justify-between shadow-inner">
+    <div className={`w-full ${aspectClass} rounded-xl p-3 bg-neutral-950 text-neutral-200 font-mono text-xs flex flex-col justify-between shadow-inner`}>
       <div>
         <div className="flex items-center justify-between pb-1 border-b border-neutral-800 text-[10px] text-neutral-400">
           <span className="flex items-center gap-1">
