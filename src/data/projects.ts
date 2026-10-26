@@ -64,6 +64,7 @@ export const projects: Project[] = [
     description:
       "A full-stack sports analytics platform that ingests official FastF1 timing and telemetry data to predict race winners and podium finishers using Random Forest classifiers, coupled with an interactive race replay simulation and autonomous virtual driver.",
     image: "/projects/f1podiumpredictor.png",
+    aspectRatio: "landscape",
     year: "2024",
     role: "Machine Learning Engineer",
     status: "Completed",
@@ -99,6 +100,7 @@ export const projects: Project[] = [
     description:
       "An educational web application tailored to bridge learning disparities in underserved rural schools. Built with offline-first client persistence, lightweight asset delivery, and interactive vernacular lessons designed to run smoothly on low-end hardware.",
     image: "/projects/graamgyaan.png",
+    aspectRatio: "square",
     year: "2024",
     role: "Full-Stack Architect",
     status: "Active",

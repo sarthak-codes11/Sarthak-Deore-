@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, IBM_Plex_Sans, JetBrains_Mono } from "next/font/google";
+import { Inter, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 
@@ -12,12 +12,6 @@ const inter = Inter({
 const ibmPlex = IBM_Plex_Sans({
   variable: "--font-ibm-plex",
   weight: ["400", "500", "600"],
-  subsets: ["latin"],
-  display: "swap"
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
   display: "swap"
 });
@@ -43,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${ibmPlex.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${ibmPlex.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white text-black font-sans selection:bg-neutral-900 selection:text-white">
         <Navigation />
