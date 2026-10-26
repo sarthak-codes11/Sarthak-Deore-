@@ -80,11 +80,25 @@ export function ProjectCarouselCard({ project, onOpenModal }: Props) {
     >
       {/* Top Meta Bar */}
       <div className="flex items-center justify-between px-4 pt-3.5 pb-2 text-xs font-mono text-neutral-500 border-b border-neutral-100 bg-neutral-50/50">
-        <div className="flex items-center gap-1.5">
+        <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-neutral-400 group-hover:bg-black transition-colors" />
           <span className="uppercase tracking-wider text-[11px] font-medium text-neutral-700">
             {project.category}
           </span>
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-300 text-[10px] font-mono font-medium transition-colors"
+              title={`Open live app: ${project.liveUrl}`}
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span>LIVE</span>
+              <ArrowUpRight className="w-2.5 h-2.5" />
+            </a>
+          )}
         </div>
 
         {/* Slide Indicator Dots */}
@@ -199,10 +213,26 @@ export function ProjectCarouselCard({ project, onOpenModal }: Props) {
             ))}
           </div>
 
-          <span className="text-xs font-mono text-neutral-600 group-hover:text-black inline-flex items-center gap-0.5 group-hover:underline">
-            <span>Case Study</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
-          </span>
+          <div className="flex items-center gap-2">
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="text-xs font-mono font-medium text-emerald-700 hover:text-emerald-950 inline-flex items-center gap-0.5 hover:underline"
+                title="Launch Live App"
+              >
+                <span>Live App</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
+            )}
+
+            <span className="text-xs font-mono text-neutral-600 group-hover:text-black inline-flex items-center gap-0.5 group-hover:underline">
+              <span>Case Study</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </span>
+          </div>
         </div>
       </div>
     </article>

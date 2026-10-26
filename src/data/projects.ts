@@ -20,6 +20,145 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "dvr-forensics",
+    title: "TraceX — Multi-Vendor DVR/NVR Forensics Platform",
+    category: "Systems & Architecture",
+    subtitle: "Automated video stream carving, forensic integrity hashing & multi-vendor CCTV recovery",
+    description:
+      "A production-grade digital video forensics platform developed to carve and recover surveillance footage from corrupted or proprietary DVR/NVR hard drives across leading manufacturers (Hikvision, Dahua, CP Plus). Features HIKBTREE filesystem parsing, unallocated-space carving, and an AI detector for collision and sudden-deceleration heuristics.",
+    image: "/projects/dvrforensics.png",
+    year: "2024",
+    role: "Team Lead — ByteForce",
+    status: "Completed",
+    githubUrl: "https://github.com/byteforce101-ops/multi-vendor-dvr-forensics",
+    liveUrl: "https://trace-x-six.vercel.app/",
+    technologies: ["Python 3.12", "FastAPI", "React", "TypeScript", "SQLAlchemy", "FFmpeg", "YOLOv8"],
+    metrics: [
+      { label: "Supported Vendors", value: "Hikvision, Dahua, CP Plus" },
+      { label: "Integrity", value: "SHA-256 Chain of Custody" },
+      { label: "Release", value: "v1.0.1 Live" },
+      { label: "Live Deployment", value: "trace-x-six.vercel.app" }
+    ],
+    architecture: [
+      "Raw disk binary stream carver identifying proprietary frame headers (HIKBTREE / MPEG-PS)",
+      "Automated video container restitching pipeline with zero-recompression FFmpeg normalization",
+      "FastAPI & SQLAlchemy backend managing forensic case files and chain-of-custody ledgers",
+      "AI video analytics engine combining YOLO and sudden deceleration heuristics"
+    ],
+    keyHighlights: [
+      "Live interactive web dashboard deployed on Vercel with case file management",
+      "Recovers fragmented and deleted surveillance video clips without metadata indices",
+      "Generates cryptographically signed forensic audit logs admissible in investigations",
+      "High-throughput multi-threaded parsing for large multi-terabyte CCTV storage images"
+    ],
+    color: "#0284C7",
+    gradient: "from-cyan-600 to-blue-950"
+  },
+  {
+    id: "f1podiumpredictor",
+    title: "F1 Race Prediction & Visualization System",
+    category: "Machine Learning",
+    subtitle: "End-to-end ML prediction engine & telemetry replay simulation for Formula 1 races",
+    description:
+      "A full-stack sports analytics platform that ingests official FastF1 timing and telemetry data to predict race winners and podium finishers using Random Forest classifiers, coupled with an interactive race replay simulation and autonomous virtual driver.",
+    image: "/projects/f1podiumpredictor.png",
+    year: "2024",
+    role: "Machine Learning Engineer",
+    status: "Completed",
+    githubUrl: "https://github.com/sarthak-codes11/f1podiumpredictor",
+    liveUrl: "https://huggingface.co/sarthakasap11/f1podiumpredictor",
+    technologies: ["Python", "Scikit-Learn", "FastF1", "Pandas", "Streamlit", "Hugging Face Spaces"],
+    metrics: [
+      { label: "Model Architecture", value: "Random Forest" },
+      { label: "Podium Accuracy", value: "94% Accuracy (0.93 AUC)" },
+      { label: "Winner Accuracy", value: "87% Top-1 Accuracy" },
+      { label: "Deployment", value: "Hugging Face Spaces" }
+    ],
+    architecture: [
+      "High-throughput FastF1 telemetry ingestion pipeline extracting sector deltas and tire degradation curves",
+      "Classification pipeline outputting calibrated podium probabilities for 20 drivers",
+      "Interactive track coordinate mapping with dynamic sector splits and cornering apex speeds",
+      "Live race replay loop simulating dynamic weather changes and pit-stop strategies"
+    ],
+    keyHighlights: [
+      "Live model hosted and interactive on Hugging Face Spaces",
+      "Calibrated probability distributions for 1st, 2nd, and 3rd place finishes across 3+ seasons",
+      "Deep feature importance analysis on qualifying lap delta vs tire compound choice",
+      "Streamlit dashboard featuring track maps and telemetry head-to-head overlays"
+    ],
+    color: "#DC2626",
+    gradient: "from-red-600 to-zinc-950"
+  },
+  {
+    id: "graamgyaan",
+    title: "GraamGyaan — Offline-First Rural EdTech",
+    category: "Full-Stack",
+    subtitle: "Smart rural educational platform engineered for low-bandwidth and offline environments",
+    description:
+      "An educational web application tailored to bridge learning disparities in underserved rural schools. Built with offline-first client persistence, lightweight asset delivery, and interactive vernacular lessons designed to run smoothly on low-end hardware.",
+    image: "/projects/graamgyaan.png",
+    year: "2024",
+    role: "Full-Stack Architect",
+    status: "Active",
+    githubUrl: "https://github.com/sarthak-codes11/GraamGyaan",
+    liveUrl: "https://graam-gyaan.vercel.app/",
+    technologies: ["TypeScript", "React", "Node.js", "Supabase", "Gemini API", "IndexedDB", "Tailwind CSS"],
+    metrics: [
+      { label: "Target Bandwidth", value: "2G / Offline-Ready" },
+      { label: "Performance", value: "30% Faster Load" },
+      { label: "Learning Modules", value: "50+ STEM Modules" },
+      { label: "Live Deployment", value: "graam-gyaan.vercel.app" }
+    ],
+    architecture: [
+      "Service-worker cached client runtime enabling complete offline interactive lesson progress",
+      "Background sync queue merging quiz results and student analytics upon connectivity recovery",
+      "Supabase backend synchronization with Google Gemini API educational assistance",
+      "Minimalist DOM rendering architecture optimized for ultra-budget Android devices"
+    ],
+    keyHighlights: [
+      "Production deployment running live on Vercel with 50+ interactive modules",
+      "Zero-latency local offline lesson completion with automated peer-to-peer sync",
+      "Interactive visual micro-quizzes with audio read-aloud support",
+      "Designed specifically for community schools with intermittent power and internet"
+    ],
+    color: "#D97706",
+    gradient: "from-amber-600 to-orange-950"
+  },
+  {
+    id: "tick-it",
+    title: "Tick-It — Smart Helpdesk System",
+    category: "Full-Stack",
+    subtitle: "High-velocity issue tracking and enterprise ticketing system with SLA workflows",
+    description:
+      "A high-velocity ticketing and customer resolution system developed from Figma design specifications into production-grade React and TypeScript code, featuring triage automations and SLA countdown monitors.",
+    image: "/projects/tickit.png",
+    year: "2024",
+    role: "Frontend Engineer",
+    status: "Completed",
+    githubUrl: "https://github.com/sarthak-codes11/tick-it",
+    liveUrl: "https://tick-it-flame.vercel.app/",
+    technologies: ["TypeScript", "React", "Tailwind CSS", "Figma Tokens", "Zustand", "Vercel"],
+    metrics: [
+      { label: "Design Fidelity", value: "1:1 Figma Match" },
+      { label: "State Management", value: "Zustand Atomic Store" },
+      { label: "Triage Latency", value: "< 50ms" },
+      { label: "Live Deployment", value: "tick-it-flame.vercel.app" }
+    ],
+    architecture: [
+      "Strict Figma token design system matching enterprise typography and component tokens",
+      "Optimistic UI updates for instant ticket status changes and assignment",
+      "Real-time filterable ticket matrix by priority, assignee, status, and SLA deadline"
+    ],
+    keyHighlights: [
+      "Live interactive web app deployed on Vercel",
+      "Custom Kanban and table views with drag-and-drop ticket state transitions",
+      "Automated priority escalations based on resolution timer milestones",
+      "Crisp keyboard shortcuts for power-user triage operations"
+    ],
+    color: "#0284C7",
+    gradient: "from-sky-600 to-cyan-950"
+  },
+  {
     id: "travelplanner",
     title: "TripMind — Agentic AI Travel Planner",
     category: "AI & Agents",
@@ -84,37 +223,6 @@ export const projects: Project[] = [
     gradient: "from-indigo-600 to-violet-950"
   },
   {
-    id: "dvr-forensics",
-    title: "Multi-Vendor DVR/NVR Digital Forensics",
-    category: "Systems & Architecture",
-    subtitle: "Automated video stream carving, forensic integrity hashing & multi-vendor CCTV recovery",
-    description:
-      "A production-grade digital video forensics platform developed to carve and recover surveillance footage from corrupted or proprietary DVR/NVR hard drives across leading manufacturers (Hikvision, Dahua, CP Plus).",
-    image: "/projects/dvrforensics.png",
-    year: "2024",
-    role: "Team Lead — ByteForce",
-    status: "Completed",
-    githubUrl: "https://github.com/byteforce101-ops/multi-vendor-dvr-forensics",
-    technologies: ["Python 3.12", "FastAPI", "SQLAlchemy", "FFmpeg", "Stream Carving", "Digital Forensics"],
-    metrics: [
-      { label: "Supported Vendors", value: "Hikvision, Dahua, CP Plus" },
-      { label: "Integrity", value: "SHA-256 Chain of Custody" },
-      { label: "Release", value: "v1.0.1 Production" }
-    ],
-    architecture: [
-      "Raw disk binary stream carver identifying proprietary frame headers and timestamps",
-      "Automated video container restitching pipeline with zero-recompression extraction",
-      "FastAPI & SQLAlchemy backend managing forensic case files and chain-of-custody ledgers"
-    ],
-    keyHighlights: [
-      "Recovers fragmented and deleted surveillance video clips without metadata indices",
-      "Generates cryptographically signed forensic audit logs admissible in investigations",
-      "High-throughput multi-threaded parsing for large multi-terabyte CCTV storage images"
-    ],
-    color: "#0284C7",
-    gradient: "from-cyan-600 to-blue-950"
-  },
-  {
     id: "citi-remittance",
     title: "Cross-Border Remittances Platform",
     category: "Full-Stack",
@@ -175,102 +283,6 @@ export const projects: Project[] = [
     ],
     color: "#7C3AED",
     gradient: "from-purple-600 to-violet-950"
-  },
-  {
-    id: "f1podiumpredictor",
-    title: "F1 Race Prediction & Telemetry Simulation",
-    category: "Machine Learning",
-    subtitle: "End-to-end ML prediction engine & telemetry replay simulation for Formula 1 races",
-    description:
-      "A full-stack sports analytics platform that ingests official FastF1 timing and telemetry data to predict race winners and podium finishers using Random Forest classifiers, coupled with an interactive race replay simulation and autonomous virtual driver.",
-    image: "/projects/f1podiumpredictor.png",
-    year: "2024",
-    role: "Machine Learning Engineer",
-    status: "Completed",
-    githubUrl: "https://github.com/sarthak-codes11/f1podiumpredictor",
-    technologies: ["Python", "Scikit-Learn", "FastF1", "Pandas", "Streamlit", "Matplotlib", "Seaborn"],
-    metrics: [
-      { label: "Model Architecture", value: "Random Forest" },
-      { label: "Evaluation Metric", value: "ROC-AUC & F1" },
-      { label: "Data Source", value: "FastF1 Live Telemetry" },
-      { label: "Visualization", value: "Interactive Track Map" }
-    ],
-    architecture: [
-      "High-throughput FastF1 telemetry ingestion pipeline extracting sector deltas and tire degradation curves",
-      "Classification pipeline outputting calibrated podium probabilities for 20 drivers",
-      "Interactive track coordinate mapping with dynamic sector splits and cornering apex speeds",
-      "Live race replay loop simulating dynamic weather changes and pit-stop strategies"
-    ],
-    keyHighlights: [
-      "Calibrated probability distributions for 1st, 2nd, and 3rd place finishes",
-      "Deep feature importance analysis on qualifying lap delta vs tire compound choice",
-      "Streamlit dashboard featuring track maps and telemetry head-to-head overlays"
-    ],
-    color: "#DC2626",
-    gradient: "from-red-600 to-zinc-950"
-  },
-  {
-    id: "graamgyaan",
-    title: "GraamGyaan — Offline-First Rural EdTech",
-    category: "Full-Stack",
-    subtitle: "Smart rural educational platform engineered for low-bandwidth and offline environments",
-    description:
-      "An educational web application tailored to bridge learning disparities in underserved rural schools. Built with offline-first client persistence, lightweight asset delivery, and interactive vernacular lessons designed to run smoothly on low-end hardware.",
-    image: "/projects/graamgyaan.png",
-    year: "2024",
-    role: "Full-Stack Architect",
-    status: "Active",
-    githubUrl: "https://github.com/sarthak-codes11/GraamGyaan",
-    technologies: ["TypeScript", "React", "Node.js", "IndexedDB", "Service Workers", "Tailwind CSS"],
-    metrics: [
-      { label: "Target Bandwidth", value: "2G / Offline-Ready" },
-      { label: "Asset Footprint", value: "< 250KB Init" },
-      { label: "Sync Engine", value: "PWA Background Sync" },
-      { label: "Language Support", value: "Vernacular / Hindi / Marathi" }
-    ],
-    architecture: [
-      "Service-worker cached client runtime enabling complete offline interactive lesson progress",
-      "Background sync queue merging quiz results and student analytics upon connectivity recovery",
-      "Minimalist DOM rendering architecture optimized for ultra-budget Android devices"
-    ],
-    keyHighlights: [
-      "Zero-latency local offline lesson completion with automated peer-to-peer sync",
-      "Interactive visual micro-quizzes with audio read-aloud support",
-      "Designed specifically for community schools with intermittent power and internet"
-    ],
-    color: "#D97706",
-    gradient: "from-amber-600 to-orange-950"
-  },
-  {
-    id: "tick-it",
-    title: "Tick-It — Smart Helpdesk System",
-    category: "Full-Stack",
-    subtitle: "High-velocity issue tracking and enterprise ticketing system with SLA workflows",
-    description:
-      "A high-velocity ticketing and customer resolution system developed from Figma design specifications into production-grade React and TypeScript code, featuring triage automations and SLA countdown monitors.",
-    image: "/projects/tickit.png",
-    year: "2024",
-    role: "Frontend Engineer",
-    status: "Completed",
-    githubUrl: "https://github.com/sarthak-codes11/tick-it",
-    technologies: ["TypeScript", "React", "Tailwind CSS", "Figma Tokens", "Zustand"],
-    metrics: [
-      { label: "Design Fidelity", value: "1:1 Figma Match" },
-      { label: "State Management", value: "Zustand Atomic Store" },
-      { label: "Triage Latency", value: "< 50ms" }
-    ],
-    architecture: [
-      "Strict Figma token design system matching enterprise typography and component tokens",
-      "Optimistic UI updates for instant ticket status changes and assignment",
-      "Real-time filterable ticket matrix by priority, assignee, status, and SLA deadline"
-    ],
-    keyHighlights: [
-      "Custom Kanban and table views with drag-and-drop ticket state transitions",
-      "Automated priority escalations based on resolution timer milestones",
-      "Crisp keyboard shortcuts for power-user triage operations"
-    ],
-    color: "#0284C7",
-    gradient: "from-sky-600 to-cyan-950"
   },
   {
     id: "smart-pothole-detection",

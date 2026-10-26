@@ -73,24 +73,48 @@ export default function HomePage() {
         <div className="ab-content flipped">
           <h2 className="about-title">Key Projects</h2>
           <p className="about-description">
-            <Link href="/projects#tripmind" className="inline-link">
+            <a
+              href="https://trace-x-six.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-link font-medium"
+            >
+              TraceX (Live Forensics) ↗
+            </a>
+            <br />
+            <a
+              href="https://huggingface.co/sarthakasap11/f1podiumpredictor"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-link font-medium"
+            >
+              F1 Predictor (Live Model) ↗
+            </a>
+            <br />
+            <a
+              href="https://graam-gyaan.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-link font-medium"
+            >
+              GraamGyaan (Live EdTech) ↗
+            </a>
+            <br />
+            <a
+              href="https://tick-it-flame.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-link font-medium"
+            >
+              Tick-It (Live Helpdesk) ↗
+            </a>
+            <br />
+            <Link href="/projects?id=travelplanner" className="inline-link">
               TripMind (ReAct Agent)
             </Link>
             <br />
-            <Link href="/projects#cipher-lens" className="inline-link">
+            <Link href="/projects?id=cipher-lens" className="inline-link">
               Cipher Lens (IPsec Analyzer)
-            </Link>
-            <br />
-            <Link href="/projects#dvr-forensics" className="inline-link">
-              DVR Digital Forensics
-            </Link>
-            <br />
-            <Link href="/projects#ascend" className="inline-link">
-              Ascend AI Career Hub
-            </Link>
-            <br />
-            <Link href="/projects#citi-remittance" className="inline-link">
-              Citi Remittance Hub
             </Link>
             <br />
             <Link href="/projects" className="inline-link">
