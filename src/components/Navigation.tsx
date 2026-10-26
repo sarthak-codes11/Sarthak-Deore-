@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useRef, useEffect, useState, useCallback } from "react";
 import { useSoundEffect } from "@/hooks/useSoundEffect";
-import { FileText, ArrowDownToLine } from "lucide-react";
 
 interface NavItem {
   href: string;
@@ -375,22 +374,6 @@ export function Navigation() {
             </nav>
           </div>
         </div>
-      </div>
-
-      {/* Resume Download Action Button */}
-      <div className="absolute right-4 sm:right-8 top-3.5 z-50">
-        <a
-          href="/Sarthak_Deore_Resume.pdf"
-          download="Sarthak_Deore_Resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-900 hover:bg-black text-white text-xs font-mono shadow-xs hover:shadow-md transition-all border border-neutral-800"
-          title="Download Sarthak Deore's Resume (PDF)"
-        >
-          <FileText className="w-3.5 h-3.5 text-neutral-300 group-hover:text-white transition-colors" />
-          <span className="font-medium tracking-tight">Resume</span>
-          <ArrowDownToLine className="w-3 h-3 text-neutral-400 group-hover:translate-y-0.5 transition-transform" />
-        </a>
       </div>
     </header>
   );
